@@ -3,107 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ChillFit Collection</title>
+    <title>Features | ChillFit Collection</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
+        .features-header {
+            text-align: center;
+            margin-bottom: 60px;
         }
-        
-        .contact-info h1 {
+        .features-header h1 {
             font-size: 3rem;
             color: var(--accent-brown);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         
-        .contact-info p {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(139, 94, 60, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 94, 60, 0.05);
+            border-color: var(--accent-brown);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-brown);
+            font-size: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+        
+        .feature-card p {
+            font-size: 0.95rem;
             opacity: 0.8;
         }
         
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .features-visual {
+            margin-top: 80px;
+            text-align: center;
+            position: relative;
         }
         
-        .social-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            text-decoration: none;
-            color: var(--dark-brown);
-            padding: 20px;
-            background: var(--white);
-            border: 1px solid rgba(139, 94, 60, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .social-item:hover {
-            border-color: var(--accent-brown);
-            transform: translateX(10px);
-            background: var(--beige);
-        }
-        
-        .social-item i {
-            font-size: 1.5rem;
-            color: var(--accent-brown);
-            width: 30px;
-        }
-        
-        .social-text h4 {
-            font-family: var(--font-subtitle);
-            font-size: 1.1rem;
-            margin-bottom: 2px;
-        }
-        
-        .social-text span {
-            font-size: 0.9rem;
-            opacity: 0.6;
-        }
-        
-        .contact-methods {
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1rem;
-        }
-        
-        .contact-method i {
-            color: var(--accent-brown);
-        }
-
-        .contact-visual {
-            display: flex;
-            justify-content: center;
-        }
-
-        .contact-visual img {
+        .features-visual img {
             width: 100%;
-            max-width: 500px;
-            border-radius: 5px;
-            box-shadow: -20px 20px 0px var(--beige);
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .closing-text {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--accent-brown);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        @media (max-width: 992px) {
-            .contact-container {
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
                 grid-template-columns: 1fr;
-            }
-            .contact-visual {
-                order: -1;
             }
         }
     </style>
@@ -123,71 +113,66 @@
     </nav>
 
     <div class="container">
-        <section class="contact" style="text-align: center;">
-            <div class="contact-header fade-in">
-                <h1 style="font-size: 3.5rem; color: var(--accent-brown); margin-bottom: 20px;">Connect With Us</h1>
-                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.8;">
-                    Temukan inspirasi fashion hijab Anda dan hubungi kami melalui platform berikut.
-                </p>
+        <section class="features">
+            <div class="features-header fade-in">
+                <h1>Our Advantages</h1>
+                <p>Kenapa Memilih <span class="brand-name">ChillFit</span> <span class="brand-collection">Collection</span>?</p>
             </div>
 
-            <div class="contact-cards-container fade-in">
-                <!-- Instagram -->
-                <div class="contact-card">
-                    <i class="fab fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <p>@chillfit.collection</p>
-                    <a href="https://instagram.com/chillfit.collection" target="_blank" class="btn btn-contact">Follow Us</a>
+            <div class="features-grid">
+                <!-- 1 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Berbasis Tone Kulit</h3>
+                    <p>Menggunakan konsep ChillFit Tone Guide (light, medium, deep) untuk membantu Anda menemukan warna terbaik yang sesuai dengan karakter kulit Anda.</p>
                 </div>
+                <!-- 2 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">👗</div>
+                    <h3>Mudah Mix & Match</h3>
+                    <p>Desain simple dan versatile yang memudahkan Anda memadukan berbagai outfit dengan gaya berbeda untuk setiap kesempatan.</p>
+                </div>
+                <!-- 3 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧵</div>
+                    <h3>Bahan Nyaman & Berkualitas</h3>
+                    <p>Dibuat dari bahan pilihan seperti wollycrepe, katun linen, satin, dan linen viscose yang adem di kulit dan tahan lama.</p>
+                </div>
+                <!-- 4 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">👒</div>
+                    <h3>Outfit Lengkap</h3>
+                    <p>Solusi total fashion mulai dari atasan, bawahan, hingga pashmina dalam satu tempat untuk penampilan yang sempurna.</p>
+                </div>
+                <!-- 5 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Kualitas premium dengan harga yang tetap bersahabat karena kami memproduksi produk sendiri secara mandiri.</p>
+                </div>
+                <!-- 6 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⏳</div>
+                    <h3>Warna Netral & Timeless</h3>
+                    <p>Pilihan warna netral seperti putih, beige, dan coklat yang tak lekang oleh waktu, cocok untuk berbagai era fashion.</p>
+                </div>
+                <!-- 7 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Konsultasi Styling Personal</h3>
+                    <p>Layanan offline berupa konsultasi styling personal untuk membantu Anda tampil maksimal dan percaya diri.</p>
+                </div>
+            </div>
 
-                <!-- TikTok -->
-                <div class="contact-card">
-                    <i class="fab fa-tiktok"></i>
-                    <h3>TikTok</h3>
-                    <p>Chillfit.Collection</p>
-                    <a href="https://tiktok.com/@chillfit.collection" target="_blank" class="btn btn-contact">Watch Now</a>
-                </div>
+            <div class="features-visual fade-in">
+                <p class="closing-text">“ChillFit tidak hanya menjual produk, tetapi memberikan solusi styling yang personal.”</p>
+            </div>
 
-                <!-- Shopee -->
-                <div class="contact-card">
-                    <i class="fas fa-shopping-bag"></i>
-                    <h3>Shopee</h3>
-                    <p>chillfit_collection</p>
-                    <a href="https://shopee.co.id/chillfit_collection" target="_blank" class="btn btn-contact">Shop Collection</a>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="contact-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>082115940917</p>
-                    <a href="https://wa.me/6282115940917" target="_blank" class="btn btn-contact">Chat Styling</a>
-                </div>
-
-                <!-- Email -->
-                <div class="contact-card">
-                    <i class="far fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>epsilon.gen5@gmail.com</p>
-                    <a href="mailto:epsilon.gen5@gmail.com" class="btn btn-contact">Send Email</a>
-                </div>
+            <div class="cta-section fade-in">
+                <a href="products.html" class="btn">View Collection</a>
             </div>
         </section>
     </div>
-
-    <!-- Merged Closing Section (Split Layout exactly like Home Hero) -->
-    <section class="hero fade-in" style="background-color: var(--white); padding: 100px 0;">
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 50px;">
-            <div class="hero-content" style="flex: 1; text-align: left;">
-                <h2 class="brand-name" style="font-size: 3.5rem; color: var(--accent-brown); margin-bottom: 20px;">Thank you for choosing ChillFit.</h2>
-                <p style="font-family: var(--font-brand); font-style: italic; font-size: 1.4rem; color: var(--soft-brown); margin-bottom: 30px;">"Where comfort meets effortless elegance."</p>
-                <a href="index.html" class="btn">Back to Home</a>
-            </div>
-            <div class="hero-image" style="flex: 1; display: flex; justify-content: center;">
-                <img src="image/waw.png.jpg" alt="Thank You ChillFit" style="width: 100%; max-width: 500px; border-radius: 5px; box-shadow: -20px 20px 0px var(--beige);">
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="container">
