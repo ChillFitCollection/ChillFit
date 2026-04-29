@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ChillFit Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .contact-info h1 {
+            font-size: 3rem;
+            color: var(--accent-brown);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: var(--dark-brown);
+            padding: 20px;
+            background: var(--white);
+            border: 1px solid rgba(139, 94, 60, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .social-item:hover {
+            border-color: var(--accent-brown);
+            transform: translateX(10px);
+            background: var(--beige);
+        }
+        
+        .social-item i {
+            font-size: 1.5rem;
+            color: var(--accent-brown);
+            width: 30px;
+        }
+        
+        .social-text h4 {
+            font-family: var(--font-subtitle);
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+        
+        .social-text span {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+        
+        .contact-methods {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1rem;
+        }
+        
+        .contact-method i {
+            color: var(--accent-brown);
+        }
+
+        .contact-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-visual img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            box-shadow: -20px 20px 0px var(--beige);
+        }
+
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .contact-visual {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.2png.jpeg" alt="ChillFit Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="contact" style="text-align: center;">
+            <div class="contact-header fade-in">
+                <h1 style="font-size: 3.5rem; color: var(--accent-brown); margin-bottom: 20px;">Connect With Us</h1>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.8;">
+                    Temukan inspirasi fashion hijab Anda dan hubungi kami melalui platform berikut.
+                </p>
+            </div>
+
+            <div class="contact-cards-container fade-in">
+                <!-- Instagram -->
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@chillfit.collection</p>
+                    <a href="https://instagram.com/chillfit.collection" target="_blank" class="btn btn-contact">Follow Us</a>
+                </div>
+
+                <!-- TikTok -->
+                <div class="contact-card">
+                    <i class="fab fa-tiktok"></i>
+                    <h3>TikTok</h3>
+                    <p>Chillfit.Collection</p>
+                    <a href="https://tiktok.com/@chillfit.collection" target="_blank" class="btn btn-contact">Watch Now</a>
+                </div>
+
+                <!-- Shopee -->
+                <div class="contact-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Shopee</h3>
+                    <p>chillfit_collection</p>
+                    <a href="https://shopee.co.id/chillfit_collection" target="_blank" class="btn btn-contact">Shop Collection</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>082115940917</p>
+                    <a href="https://wa.me/6282115940917" target="_blank" class="btn btn-contact">Chat Styling</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-card">
+                    <i class="far fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>epsilon.gen5@gmail.com</p>
+                    <a href="mailto:epsilon.gen5@gmail.com" class="btn btn-contact">Send Email</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Merged Closing Section (Split Layout exactly like Home Hero) -->
+    <section class="hero fade-in" style="background-color: var(--white); padding: 100px 0;">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 50px;">
+            <div class="hero-content" style="flex: 1; text-align: left;">
+                <h2 class="brand-name" style="font-size: 3.5rem; color: var(--accent-brown); margin-bottom: 20px;">Thank you for choosing ChillFit.</h2>
+                <p style="font-family: var(--font-brand); font-style: italic; font-size: 1.4rem; color: var(--soft-brown); margin-bottom: 30px;">"Where comfort meets effortless elegance."</p>
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+            <div class="hero-image" style="flex: 1; display: flex; justify-content: center;">
+                <img src="image/waw.png.jpg" alt="Thank You ChillFit" style="width: 100%; max-width: 500px; border-radius: 5px; box-shadow: -20px 20px 0px var(--beige);">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h3 class="brand-name">ChillFit <span class="brand-collection">Collection</span></h3>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2024 ChillFit Collection. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

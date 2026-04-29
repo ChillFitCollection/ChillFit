@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChillFit Collection | Casual Elegant Fashion</title>
+    <meta name="description" content="ChillFit Collection - Simple, stylish, and comfortable fashion for women with a personal styling touch.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90vh;
+            gap: 50px;
+            padding-top: 50px;
+        }
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: fadeInLeft 1s ease-out;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 20px 20px 0px var(--beige);
+        }
+        .hero-content {
+            flex: 1;
+            animation: fadeInRight 1s ease-out;
+        }
+        .brand-title {
+            font-size: 4.5rem;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            text-transform: lowercase;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            color: var(--accent-brown);
+        }
+        
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background-color: var(--white);
+        }
+        .about-content {
+            flex: 1.5;
+        }
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-brown);
+        }
+        .about p {
+            font-size: 1rem;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @media (max-width: 992px) {
+            .hero, .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image img {
+                box-shadow: none;
+            }
+            .brand-title {
+                font-size: 3rem;
+            }
+            .about p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.2png.jpeg" alt="ChillFit Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section (Reverted to original) -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="brand-title">
+                    <span class="brand-name">ChillFit</span> 
+                    <span class="brand-collection">Collection</span>
+                </h1>
+                <p class="tagline">casual . elegant . you</p>
+                <a href="products.html" class="btn">Discover ChillFit</a>
+            </div>
+            <div class="hero-image">
+                <img src="image/model.png.png" alt="ChillFit Collection Hero">
+            </div>
+        </section>
+
+        <!-- About Section (Restored spacing) -->
+        <section class="about fade-in" id="about">
+            <div class="about-content">
+                <h2>About <span class="brand-name">ChillFit</span> <span class="brand-collection">Collection</span></h2>
+                <p>
+                    ChillFit adalah brand fashion perempuan berhijab yang menghadirkan konsep simple, stylish, dan nyaman untuk menunjang penampilan sehari-hari. Tidak hanya menyediakan produk fashion seperti atasan, rok, dan pashmina, ChillFit juga menawarkan pengalaman berbelanja yang lebih personal melalui layanan konsultasi styling.
+                </p>
+                <p>
+                    Mengusung konsep hybrid, ChillFit menggabungkan platform online sebagai media pembelian produk dengan layanan offline berupa konsultasi langsung. Melalui metode ChillFit Tone Guide, pelanggan dapat mengetahui kategori warna kulit (light, medium, deep) secara lebih sederhana dan akurat, sehingga lebih mudah menentukan warna outfit yang sesuai.
+                </p>
+                <p>
+                    Seluruh produk dibuat dengan bahan berkualitas seperti satin velvet, wollycrepe, katun linen, lightweight denim, dan linen viscose yang nyaman digunakan serta mudah dipadukan (mix and match). Dengan konsep ini, ChillFit hadir tidak hanya sebagai brand fashion, tetapi juga sebagai fashion assistant yang membantu perempuan berhijab tampil lebih percaya diri, praktis, dan sesuai dengan karakter diri.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="image/mnsia.png.jpg" alt="About ChillFit">
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h3 class="brand-name">ChillFit <span class="brand-collection">Collection</span></h3>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2024 ChillFit Collection. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

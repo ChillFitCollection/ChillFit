@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | ChillFit Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .features-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .features-header h1 {
+            font-size: 3rem;
+            color: var(--accent-brown);
+            margin-bottom: 10px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(139, 94, 60, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 94, 60, 0.05);
+            border-color: var(--accent-brown);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-brown);
+            font-size: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+        
+        .feature-card p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .features-visual {
+            margin-top: 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .features-visual img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .closing-text {
+            margin-top: 50px;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--accent-brown);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.2png.jpeg" alt="ChillFit Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="features">
+            <div class="features-header fade-in">
+                <h1>Our Advantages</h1>
+                <p>Kenapa Memilih <span class="brand-name">ChillFit</span> <span class="brand-collection">Collection</span>?</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- 1 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Berbasis Tone Kulit</h3>
+                    <p>Menggunakan konsep ChillFit Tone Guide (light, medium, deep) untuk membantu Anda menemukan warna terbaik yang sesuai dengan karakter kulit Anda.</p>
+                </div>
+                <!-- 2 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">👗</div>
+                    <h3>Mudah Mix & Match</h3>
+                    <p>Desain simple dan versatile yang memudahkan Anda memadukan berbagai outfit dengan gaya berbeda untuk setiap kesempatan.</p>
+                </div>
+                <!-- 3 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧵</div>
+                    <h3>Bahan Nyaman & Berkualitas</h3>
+                    <p>Dibuat dari bahan pilihan seperti wollycrepe, katun linen, satin, dan linen viscose yang adem di kulit dan tahan lama.</p>
+                </div>
+                <!-- 4 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">👒</div>
+                    <h3>Outfit Lengkap</h3>
+                    <p>Solusi total fashion mulai dari atasan, bawahan, hingga pashmina dalam satu tempat untuk penampilan yang sempurna.</p>
+                </div>
+                <!-- 5 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terjangkau</h3>
+                    <p>Kualitas premium dengan harga yang tetap bersahabat karena kami memproduksi produk sendiri secara mandiri.</p>
+                </div>
+                <!-- 6 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⏳</div>
+                    <h3>Warna Netral & Timeless</h3>
+                    <p>Pilihan warna netral seperti putih, beige, dan coklat yang tak lekang oleh waktu, cocok untuk berbagai era fashion.</p>
+                </div>
+                <!-- 7 -->
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Konsultasi Styling Personal</h3>
+                    <p>Layanan offline berupa konsultasi styling personal untuk membantu Anda tampil maksimal dan percaya diri.</p>
+                </div>
+            </div>
+
+            <div class="features-visual fade-in">
+                <p class="closing-text">“ChillFit tidak hanya menjual produk, tetapi memberikan solusi styling yang personal.”</p>
+            </div>
+
+            <div class="cta-section fade-in">
+                <a href="products.html" class="btn">View Collection</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h3 class="brand-name">ChillFit <span class="brand-collection">Collection</span></h3>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2024 ChillFit Collection. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
